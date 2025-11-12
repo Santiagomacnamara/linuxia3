@@ -1,0 +1,221 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sobre-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2d1b3d 0%, #4a2654 50%, #8b4a6f 100%);
+  color: #e0d4f7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 60px;
+}
+
+.sobre-hero {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at 50% 50%, rgba(185, 99, 182, 0.3) 0%, transparent 70%);
+  position: relative;
+  overflow: hidden;
+}
+
+.sobre-hero::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(90deg, rgba(185, 99, 182, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(185, 99, 182, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.sobre-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #b963b6;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-shadow: 
+    0 0 10px #b963b6,
+    0 0 20px #b963b6,
+    0 0 30px #8b4a6f;
+  position: relative;
+  z-index: 1;
+}
+
+.sobre-subtitle {
+  font-size: 1.4rem;
+  margin-top: 15px;
+  color: #d4a5d4;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.developers-section {
+  max-width: 1400px;
+  margin: -60px auto 60px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.developer-card {
+  background: rgba(45, 27, 61, 0.9);
+  border: 2px solid #b963b6;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 40px rgba(185, 99, 182, 0.3);
+}
+
+.developer-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  border-color: #d4a5d4;
+  box-shadow: 0 20px 60px rgba(185, 99, 182, 0.5);
+}
+
+.dev-image-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.dev-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.developer-card:hover .dev-image {
+  transform: scale(1.1);
+}
+
+.dev-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(45, 27, 61, 0.8) 100%);
+}
+
+.dev-info {
+  padding: 30px;
+}
+
+.dev-name {
+  font-size: 2rem;
+  color: #b963b6;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.dev-role {
+  font-size: 1.1rem;
+  color: #d4a5d4;
+  margin-bottom: 20px;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dev-description {
+  line-height: 1.8;
+  color: #e0d4f7;
+  margin-bottom: 25px;
+  font-size: 1.05rem;
+}
+
+.dev-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #b963b6, #8b4a6f);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(185, 99, 182, 0.3);
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(185, 99, 182, 0.5);
+}
+
+.mission-section {
+  max-width: 900px;
+  margin: 60px auto 0;
+  padding: 40px;
+  background: rgba(45, 27, 61, 0.8);
+  border: 2px solid #b963b6;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(185, 99, 182, 0.3);
+}
+
+.mission-title {
+  font-size: 2.5rem;
+  color: #b963b6;
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 0 0 15px rgba(185, 99, 182, 0.5);
+}
+
+.mission-text {
+  line-height: 1.9;
+  color: #d4a5d4;
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .developers-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre-title {
+    font-size: 2.5rem;
+  }
+  
+  .sobre-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .developers-section {
+    margin-top: -30px;
+  }
+  
+  .dev-image-container {
+    height: 250px;
+  }
+  
+  .mission-section {
+    padding: 25px;
+    margin: 40px 20px 0;
+  }
+  
+  .mission-title {
+    font-size: 2rem;
+  }
+}
