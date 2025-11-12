@@ -1,6 +1,7 @@
 import React from 'react';
 import macfoto from '../components/mac.jpg';
 import cintifoto from '../components/cintimaricon.jpg';
+import lolofoto from '../components/Lorenzo.jpg';
 
 const SobreNosotros = () => {
   return <div className="sobre-container">
@@ -59,6 +60,32 @@ const SobreNosotros = () => {
     </div>
   </div>
 
+<div className="developers-section">
+    <div className="developer-card">
+      <div className="dev-image-container">
+        <img 
+          src= {lolofoto} 
+          alt="Desarrollador 1" 
+          className="dev-image"
+        />
+        <div className="dev-overlay"></div>
+      </div>
+    
+      <div className="dev-info">
+        <h2 className="dev-name">Lorenzo Sanchez</h2>
+        <p className="dev-role">Apoyador espiritual</p>
+        <p className="dev-description">
+          Con su presencia omnipresente nos acompaño en alma todo el camino de nuestro trabajo en conjunto. Su sabiduria ancestral y su espiritu inquebrantable nos guiaron en los momentos mas oscuros. Ademas es un experto en Linux y sistemas abiertos.
+        </p>
+        <div className="dev-skills">
+          <span className="skill-tag">Linux</span>
+          <span className="skill-tag">Github</span>
+          <span className="skill-tag">Docker</span>
+          <span className="skill-tag">Bash</span>
+        </div>
+      </div>
+    </div>
+
   <div className="mission-section">
     <h2 className="mission-title">Nuestra Misión</h2>
     <p className="mission-text">
@@ -70,6 +97,6 @@ const SobreNosotros = () => {
     </p>
   </div>
 </div>
+</div>;
 };
-
 export default SobreNosotros;
